@@ -1,0 +1,12 @@
+# Cargo.toml for getsecure project
+[package]
+name = "getsecure"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+md5 = "0.7.0"
+base64 = "0.13.0"
+chrono = "0.4.19"
+url = "2.2.2"
+clap = { version = "3.1.6", features = ["derive"] }
