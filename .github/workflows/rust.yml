@@ -5,7 +5,7 @@ on:
     branches: '**'
 jobs:
   rust-workflow:
-    uses: affinidi/pipeline-rust/.github/workflows/on-push.yaml@fix/release-step-on-branch
+    uses: affinidi/pipeline-rust/.github/workflows/on-push.yaml@fix/branch-pipeline-align-to-branch
     secrets: inherit
     with:
       auditIgnore: "RUSTSEC-2022-0040,RUSTSEC-2023-0071"
