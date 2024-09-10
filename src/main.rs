@@ -13,7 +13,6 @@ struct Args {
     period: i64,
 }
 
-
 use base64::{encode_config, URL_SAFE_NO_PAD};
 use chrono::{Duration, Utc};
 use url::Url;
@@ -21,8 +20,7 @@ use url::Url;
 fn secure_link(baselink: &str, secret: &str, period: i64) -> String {
     let url = Url::parse(baselink).expect("Invalid URL");
 
-    let expires = (Utc::now() + Duration::days(period))
-        .timestamp();
+    let expires = (Utc::now() + Duration::days(period)).timestamp();
 
     let hashstring = format!("{}{} {}", expires, url.path(), secret);
 
