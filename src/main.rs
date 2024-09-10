@@ -24,6 +24,13 @@ fn secure_link(baselink: &str, secret: &str, period: i64) -> String {
 
     let hashstring = format!("{}{} {}", expires, url.path(), secret);
 
+
+
+
+
+
+    
+
     let result = md5::compute(hashstring.as_bytes());
 
     let protection_string = encode_config(&result[..], URL_SAFE_NO_PAD);
